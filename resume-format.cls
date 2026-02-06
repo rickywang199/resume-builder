@@ -32,26 +32,18 @@
 \RequirePackage[empty]{fullpage}
 \RequirePackage{titlesec}
 \RequirePackage{marvosym}
-\RequirePackage[usenames,dvipsnames]{color}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{verbatim}
 \RequirePackage{enumitem} % Handles list environments
 \RequirePackage[hidelinks]{hyperref} % Settings for hyperlinks
 \RequirePackage{fancyhdr} % Create header and footer
 \RequirePackage[english]{babel}
-\RequirePackage{csquotes}
 \RequirePackage{tabularx} % Allows tables with automatically varying column widths
 \RequirePackage[export]{adjustbox} % Allows for easy resizing of tables or figures to fit page width
 \RequirePackage{indentfirst} % Allows first paragraph in new section to have indentation
 
 \input{glyphtounicode}
 
-% To use bib file for publication information
-% Sorting=ydnt gives reverse year then name then title
-% Maxbibnames and minbibnames define number of authors before et al.
-% Uniquelist requires additional authors to be added such that each publication has a unique list of authors
-\usepackage[backend=biber,style=authoryear,sorting=ydnt, maxbibnames=1, minbibnames=1,uniquelist=false]{biblatex}
-% \addbibresource{citations.bib} % Read in citations from citations.bib - uncomment if using biblatex to generate publications list
-\setlength\bibitemsep{1em} % Set separation between multiple citations
 
 %-------------------------------------------------------------------------------
 %                Configuration for document layout and style
@@ -134,12 +126,3 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-% A quick style for publications/citations without using biblatex
-% Just put all the text you want the citation to have for [1] and the hanging indent will automatically be applied
-% Usage: \cvpub{<citation>}
-\newcommand*{\cvpub}[1]{%
-	\leftskip 1.1cm
-    \parindent -0.7cm
-    {#1}\vspace{3pt}
-}
