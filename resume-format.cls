@@ -1,10 +1,9 @@
-%% Start of file `fed-res.cls'.
-% Federal Resume Class File
+% Resume Class File
 
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{fed-res}
+\ProvidesClass{resume-format}
 \NeedsTeXFormat{LaTeX2e}
 
 %-------------------------------------------------------------------------------
@@ -20,6 +19,8 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
+\RequirePackage{newtxtext}
+\RequirePackage{newtxmath}
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -63,11 +64,11 @@
 \setlength{\footskip}{4.4pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1in}
 
 \urlstyle{same}
 
@@ -102,13 +103,6 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% For a volunteer experience or job related training item without a location
-\newcommand{\resumeSubheadingShort}[2]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
 
 % For a work experience item including supervisor info and hours worked
 \newcommand{\resumeSubheadingWork}[6]{
@@ -122,13 +116,6 @@
     \end{tabularx}\vspace{-7pt}
 }
 
-% Optional style for multiple work positions
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{#1} & \textit{ #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
 
 % Optional style for projects
 \newcommand{\resumeProjectHeading}[2]{
